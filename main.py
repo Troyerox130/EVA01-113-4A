@@ -9,11 +9,11 @@ def main():
     automotora = Automotora("Elden Motors")
 
     # Crear 2 automóviles
-    auto1 = Auto("DS-2748", "Toyota", "Corolla", 2019, 18000000, 4, "Gasolina")
-    auto2 = Auto("ER-2587", "Ford", "Focus", 2022, 22000000, 4, "Diesel")
+    auto1 = Auto("DS-2748", "Lamborghini", "Murcielago", 2010, 18000000, 4, "Gasolina")
+    auto2 = Auto("ER-2587", "Ford", "Mustang", 1998, 22000000, 4, "Diesel")
 
     # Crear motocicleta
-    moto1 = Motocicleta("SK-1879", "Honda", "CBR 600", 2017, 9500000, 600, "Deportiva")
+    moto1 = Motocicleta("SK-1879", "Harley-Davidson", "Panhead", 1965, 9500000, 1000, "Chopper")
 
     # Agregar vehículos a la automotora
     automotora.agregarVehiculo(auto1)
@@ -31,6 +31,7 @@ def main():
 
     # Calcular años de uso del auto
     print(f"Años de uso del auto: {auto1.calcularAñosUso(2026)}")
+    print(f"Años de uso del auto: {auto2.calcularAñosUso(2026)}")
 
     # Probar métodos de Motocicleta
     print("\n===== MOTOCICLETA =====")
