@@ -11,6 +11,11 @@ class Auto(Vehiculo):
         self.numPuertas = numPuertas
         self.combustible = combustible
 
+    def mostrarInfo(self):
+        super().mostrarInfo()
+        print(f"Número de puertas: {self.numPuertas}")
+        print(f"Combustible: {self.combustible}")
+
     def abrirMaletero(self):
         print("El maletero está abierto.")
 

@@ -5,51 +5,56 @@ from automotora import Automotora
 
 
 def main():
-
     # Crear automotora
-    
+    automotora = Automotora("Elden Motors")
 
     # Crear 2 automóviles
-
-
+    auto1 = Auto("DS-2748", "Toyota", "Corolla", 2019, 18000000, 4, "Gasolina")
+    auto2 = Auto("ER-2587", "Ford", "Focus", 2022, 22000000, 4, "Diesel")
 
     # Crear motocicleta
-
+    moto1 = Motocicleta("SK-1879", "Honda", "CBR 600", 2017, 9500000, 600, "Deportiva")
 
     # Agregar vehículos a la automotora
-
+    automotora.agregarVehiculo(auto1)
+    automotora.agregarVehiculo(auto2)
+    automotora.agregarVehiculo(moto1)
 
     # Mostrar vehículos
     print("===== VEHÍCULOS DE LA AUTOMOTORA =====")
-    
-
+    automotora.mostrarVehiculos()
 
     # Probar métodos de un Auto
     print("\n===== AUTO =====")
-
+    print(f"Tiene aire acondicionado: {auto1.tieneAireAcondicionado()}")
+    auto1.abrirMaletero()
 
     # Calcular años de uso del auto
-
+    print(f"Años de uso del auto: {auto1.calcularAñosUso(2026)}")
 
     # Probar métodos de Motocicleta
     print("\n===== MOTOCICLETA =====")
-
+    print(f"¿Es de alta cilindrada? {moto1.esDeAltaCilindrada()}")
+    moto1.encenderMotor()
 
     # Calcular años de uso de la motocicleta
-
+    print(f"Años de uso de la motocicleta: {moto1.calcularAñosUso(2026)}")
 
     # Crear vendedor
-    # vendedor1 = Vendedor(
-    #     "Juan Pérez",
-    #     "12.345.678-9",
-    #     "987654321"
-    # )
+    vendedor1 = Vendedor("Juan Pérez", "12.345.678-9", "987654321")
 
+    # Mostrar los datos del vendedor
     print("\n===== VENDEDOR =====")
+    vendedor1.mostrarDatos()
 
+    # Realizar cálculo de comisión
+    monto_venta = 7000000
+    comision = vendedor1.calcularComision(monto_venta)
 
+    # Mostrar los resultados obtenidos
+    print(f"Monto de venta: ${monto_venta:,.0f}")
+    print(f"Comisión: ${comision:,.0f}")
 
-    
 
 if __name__ == "__main__":
     main()

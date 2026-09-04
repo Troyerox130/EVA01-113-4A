@@ -10,8 +10,13 @@ class Motocicleta(Vehiculo):
         self.cilindrada = cilindrada
         self.tipo = tipo
 
+    def mostrarInfo(self):
+        super().mostrarInfo()
+        print(f"Cilindrada: {self.cilindrada} cc")
+        print(f"Tipo: {self.tipo}")
+
     def encenderMotor(self):
         print("La motocicleta está encendida.")
 
     def esDeAltaCilindrada(self):
-        pass
+        return self.cilindrada >= 500

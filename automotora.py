@@ -4,8 +4,11 @@ class Automotora:
         self.nombre = nombre
         self.vehiculos = []
 
-    def agregarVehiculo(self, vehiculo):
+    def agregarVehiculos(self, vehiculo):
         self.vehiculos.append(vehiculo)
+
+    def agregarVehiculo(self, vehiculo):
+        self.agregarVehiculos(vehiculo)
 
     def mostrarVehiculos(self):
         print("Automotora:", self.nombre)
